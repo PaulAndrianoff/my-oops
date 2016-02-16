@@ -1,0 +1,217 @@
+/*------------------------------------*\
+$GENERAL
+\*------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{
+	color: #FFFFFF;	
+}
+
+/*------------------------------------*\
+$Header
+\*------------------------------------*/
+#header{
+	width: 100%;		
+	background: #999;
+	height: 50px;
+}
+
+/***************** FONTS ********************/
+@import url("http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300");
+html{font-size: 62.5%; font-family: 'Open Sans', sans-serif;}
+body{font-size: 1.6rem; min-height: 100vh;}
+h1{font-size: 3rem; margin-bottom: 1rem;}
+h2{font-size: 1.6rem;}
+header{ background: #999;}
+main{padding: 2rem;}
+
+/***************** NAVIGATION ********************/
+nav{
+	position: relative;
+	z-index: 10;
+	overflow: hidden;	
+}
+nav ul{
+	display: flex; 
+	flex-wrap: wrap; 
+	max-width: 1080px; 
+	margin: 0 auto;
+	list-style: none;
+	padding: 0;		
+}
+nav ul,
+nav li{
+	flex: 1;	
+}
+nav li:last-child{border-bottom: none;}
+nav a{
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	font-size: 1.8rem;
+}
+nav a:hover{
+	background: #adacac;
+	color: #fff;
+}
+nav li{
+	position: relative;
+	line-height: 50px;
+	color: #fff;
+	text-align: center;
+}  
+nav input,
+nav label{
+	display: none;
+	width: 36px; 
+	height: 36px; 
+	background: #555; 
+	color: #fff; 
+	text-align: center; 
+	line-height: 36px;
+	font-size: 1.6rem;
+	border-radius: 4px;
+} 
+nav label{position: absolute; top: 8px; right: 8px; transition: .4s;}
+nav label:hover{cursor:pointer;}
+nav label:before{
+	font-family: FontAwesome;
+	font-size: 24px;
+	content: "\f0c9";
+	text-align: center;
+}
+
+/*************** MEDIA QUERIES *******************/
+@media only screen and (max-width: 1080px){
+	nav ul{
+		display: none; 
+		box-shadow: 0 0 5px rgba(0,0,0, .7);
+	}
+	nav li{
+		flex: none; 
+		width: 100%;
+		border-bottom: solid 1px #777;
+	} 
+	nav input[type="checkbox"]:checked + ul{
+		display: block;
+		width: 100%;
+		background: #999;          
+	}
+	nav label{display: block;}  
+	nav input[type="checkbox"]:checked + ul li:nth-child(1){
+		background: #777; 
+		color: #fff;
+	}  
+}
+
+/*------------------------------------*\
+$Slider
+\*------------------------------------*/
+#slider{
+	position: relative;
+}
+
+.content{
+	position: absolute;
+	transition: width 1s;
+	width: 33.33%;
+	border-top: 2.5px solid #FFFFFF;
+	border-left: 2.5px solid #FFFFFF;
+}
+
+.active{
+	transition: width 1s, height 2s;
+	width: 100%;
+}
+
+h2{
+	padding: 10px;
+	text-align: center;
+}
+
+.minContainer{
+	width: 900px;
+	margin: auto;
+}
+
+.red{
+	width: 100%;
+	height: 600px;
+	border: 1px solid #000000;
+}
+/*------------------------------------*\
+$Découvrez Oops
+\*------------------------------------*/
+
+#decouvrer{
+	background: #FFCBA1;
+}
+
+/*------------------------------------*\
+$Grossiste
+\*------------------------------------*/
+
+#grossiste{
+	margin-left: 33.33%;
+	background: #FF9176;
+}
+#grossiste.active{
+	transform-origin: center;
+	transition: width 1s, height 2s;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+/*------------------------------------*\
+$Professionel
+\*------------------------------------*/
+
+#professionel{
+	right: 0px;
+	background: #F4B13C;
+}
+
+#professionel.active{
+	transition: width 1s, height 2s;
+	margin-left: -66.66%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
